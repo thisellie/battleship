@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <main>
+      <section id="game-info">
+        <p>Turn: <span id="turn-display"></span></p>
+        <p>Info: <span id="info"></span></p>
+      </section>
+      <section id="gameboard-container"></section>
+      <section class="option-container">
+        <div class="destroyer-preview destroyer" draggable="true"></div>
+        <div class="submarine-preview submarine" draggable="true"></div>
+        <div class="cruiser-preview cruiser" draggable="true"></div>
+        <div class="battleship-preview battleship" draggable="true"></div>
+        <div class="carrier-preview carrier" draggable="true"></div>
+      </section>
+      <button id="flip-button">Flip</button>
+      <button id="start-button">Start</button>
+    </main>
+  </body>
+</html>

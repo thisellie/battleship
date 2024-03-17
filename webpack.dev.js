@@ -1,10 +1,11 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin')
 
 module.exports = {
   mode: 'development',
   entry: './src/main.js',
   devServer: {
-    static: './dist',
+    static: './src',
     port: 9000,
     open: true
   },
@@ -20,8 +21,8 @@ module.exports = {
     }]
   },
   plugins: [new HtmlWebpackPlugin({
-    title: 'thisellie\'s Battleship',
+    title: 'Battleship',
     template: './src/index.html',
     favicon: './src/favicon.ico'
-  })]
+  }), new HtmlWebpackHarddiskPlugin()]
 }
